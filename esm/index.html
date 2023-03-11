@@ -1,0 +1,32 @@
+<!--
+ * @Date: 2023-03-11 02:33:08
+ * @LastEditors: aibo chang aibochang@163.com
+ * @LastEditTime: 2023-03-11 02:40:18
+ * @FilePath: \ReBack\my-ui\esm\index.html
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../dist/Entry.css">
+</head>
+
+<body>
+<div id="app"></div>
+<script type="module">
+  import {createApp} from "./vue.esm-bundler.js"
+  import Entry,{ MyButton,MyButton2,MyButton3 } from '../dist/my-ui.js'
+  createApp({template:`
+    <MyButton/>
+    <MyButton2/>
+    <MyButton3 color="red" icon="add"/>
+  `}).use(Entry).mount("#app")
+</script>
+</body>
+
+</html>
